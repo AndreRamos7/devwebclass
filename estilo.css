@@ -16,17 +16,17 @@ div#cabecalho2 {
 }
 
 div.coluna {
-    *display* : block;
-    *float* : left;
-    *width* : 20%;
-    *height* : 200px;
-    *border* : 2px dotted black;
-    *background-color* : #b9b095;
-    *margin* : 50px 5px 30px 5px;
-    *padding* : 25px;
+    display: block;
+    float: left;
+    width: 20%;
+    height: 200px;
+    border: 2px dotted black;
+    background-color: #b9b095;
+    margin: 50px 5px 30px 5px;
+    padding: 25px;
 
     /* a propriedade abaixo evita aumento do elemento ao aplicar um preenchimento padding ou aumento de borda, impedindo que ele aumente */
-    *box-sizing*: border-box;
+    box-sizing: border-box;
 }
 
 #rodape {
