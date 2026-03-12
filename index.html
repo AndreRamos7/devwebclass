@@ -6,15 +6,34 @@
 		<meta name="author" content="Andre de Jesus">
 		<meta name="description" content="HTMl5">
 		<link rel="stylesheet" href="estilo.css">
+		
+		<script>
+			let nome = "Andre";
+			const sobrenome = "Ramos";
 
-		<style>
-		</style>
+			let acao = function clicar() {
+				alert("Clicou no cabeçalho 2 = " + nome 
+					+ " " + sobrenome);
+			}	
 
+			let addTexto = function() {
+				let rodape = document.getElementById("rodape");
+				rodape.innerHTML = " - " + nome + " " + sobrenome;
+			}
+
+			for(let i = 0; i < 5; i++){
+				document.write("Número: " + i + "<br>");
+			}
+			let c = 0;
+			while(c < 10){
+				document.write("Número: " + c + "<br>");
+			}
+
+		</script>		
 	</head>
 	<body>
-		<div id="cabecalho1" class="divisoes">  </div>	
-
-		<div id="cabecalho2" class="divisoes">  
+		<div id="cabecalho1" class="divisoes" onclick="addTexto()">  </div>	
+		<div id="cabecalho2" class="divisoes" onclick="acao()">  
 			<img src="img/logo.svg" 
 				alt="Logo da Escola Estácio ABC"
 				title="Escola Estácio ABC"

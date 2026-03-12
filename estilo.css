@@ -15,6 +15,12 @@ div#cabecalho2 {
     background-color: #e2a90b;
 }
 
+div#cabecalho2:hover {
+    cursor: pointer;
+    cursor: url('hand.png'), pointer;
+    background-color: blue;
+}
+
 div.coluna {
     display: block;
     float: left;
@@ -42,5 +48,11 @@ div.coluna {
 @media screen and (min-width: 400px) and (max-width: 800px) {
     body{
         background-color: greenyellow;
+    }
+}
+
+@media print  {
+    body{
+        background-color: rgb(197, 13, 28);
     }
 }

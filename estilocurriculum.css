@@ -1,0 +1,29 @@
+div.laterais{
+    float: left;
+    padding: 10px;
+}
+
+div#esquerda{
+   text-align: center;
+
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    height: 700px;
+    width: 18%;
+}
+
+div#esquerda div#foto img{
+    border-radius: 50%;
+}
+
+div#direita{
+    border: 1px solid black;
+    height: 700px;
+    width: 78%;
+}
+
+article#info h3{
+    text-align: center;
+    border-bottom: 3px solid white;
+}
