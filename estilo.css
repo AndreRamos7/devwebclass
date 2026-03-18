@@ -44,6 +44,8 @@ div.coluna {
     background-color: #e2a90b;
 }
 
+
+
 /* Media Queries RESPONSIVIDADE CSS */
 @media screen and (min-width: 400px) and (max-width: 800px) {
     body{

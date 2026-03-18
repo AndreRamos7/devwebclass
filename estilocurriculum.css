@@ -4,8 +4,7 @@ div.laterais{
 }
 
 div#esquerda{
-   text-align: center;
-
+    /* text-align: center; */
     border: 1px solid black;
     background-color: blue;
     color: white;
@@ -26,4 +25,18 @@ div#direita{
 article#info h3{
     text-align: center;
     border-bottom: 3px solid white;
+}
+
+
+ul {
+  list-style-position: outside; /* Marcador fora do bloco de texto */
+  padding-left: 0;             /* Remove o preenchimento padrão */
+  margin-left: 20px;           /* Define um recuo personalizado igual para todos */
+}
+ul li {
+    list-style-type: square; /* none | square | lower-greek | katakana */
+    text-indent: -10px; /* Move o marcador para a esquerda */
+    list-style-position: inside; /* outside O marcador fica dentro do bloco de texto */
+
+    padding-left: 5px;
 }

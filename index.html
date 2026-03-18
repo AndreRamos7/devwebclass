@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<title > Escola Estácio ABC </title>
-		<meta name="author" content="Andre de Jesus">
-		<meta name="description" content="HTMl5">
-		<link rel="stylesheet" href="estilo.css">
-		
-		<script>
-			let nome = "Andre";
-			const sobrenome = "Ramos";
 
-			let acao = function clicar() {
-				alert("Clicou no cabeçalho 2 = " + nome 
-					+ " " + sobrenome);
-			}	
+<head>
+	<meta charset="utf-8">
+	<title> Escola Estácio ABC </title>
+	<meta name="author" content="Andre de Jesus">
+	<meta name="description" content="HTMl5">
+	<link rel="stylesheet" href="estilo.css">
 
-			let addTexto = function() {
+	<script>
+		let nome = "Andre";
+		const sobrenome = "Ramos";
+
+		let acao = function clicar() {
+			alert("Clicou no cabeçalho 2 = " + nome
+				+ " " + sobrenome);
+		}
+
+		let addTexto = function () {
+			let rodape = document.getElementById("rodape");
+			rodape.innerHTML = " - " + nome + " " + sobrenome;
+		}
+
+		for (let i = 0; i < 5; i++) {
+			document.write("Número: " + i + "<br>");
+		}
+		let c = 0;
+		while (c < 10) {
+			document.write("Número: " + c + "<br>");
+			c++;
+		}
+
+		async function carregarArquivo() {
+			try {
+				// erro ocorrerá aqui. Por quê?
+				const response = await fetch('arquivo.txt');
+				textoVar = await response.text();
+
 				let rodape = document.getElementById("rodape");
-				rodape.innerHTML = " - " + nome + " " + sobrenome;
+				rodape.innerHTML = textoVar;
+
+				console.log(textoVar); // Conteúdo do arquivo aqui
+			} catch (error) {
+				console.error('Erro ao ler o arquivo:', error);
 			}
+		}
 
-			for(let i = 0; i < 5; i++){
-				document.write("Número: " + i + "<br>");
-			}
-			let c = 0;
-			while(c < 10){
-				document.write("Número: " + c + "<br>");
-				c++;
-			}
+	</script>
+</head>
 
-		</script>		
-	</head>
-	<body>
-		<div id="cabecalho1" class="divisoes" onclick="addTexto()">  </div>	
-		<div id="cabecalho2" class="divisoes" onclick="acao()">  
-			<img src="img/logo.svg" 
-				alt="Logo da Escola Estácio ABC"
-				title="Escola Estácio ABC"
-				width="200px" 
-				height="100px" >
-		</div>		
+<body>
+	<div id="cabecalho1" class="divisoes" onclick="addTexto()"> </div>
+	<div id="cabecalho2" class="divisoes" onclick="acao()">
+		<img src="img/logo.svg" alt="Logo da Escola Estácio ABC" title="Escola Estácio ABC" width="200px"
+			height="100px">
+	</div>
 
-		<div id="conteudo" class="divisoes"> 
-			<div class="coluna"> asd1 </div>	
-			<div class="coluna"> asd2 </div>	
-			<div class="coluna"> asd3 </div>			
-		</div>		
+	<div id="conteudo" class="divisoes">
+		<div class="coluna" onclick="carregarArquivo()"> asd1 </div>
+		<div class="coluna"> asd2 </div>
+		<div class="coluna"> asd3 </div>
+	</div>
 
-		<div id="rodape" style="background-color: chocolate;" >
-			NAsdmjasjkdhaskj haskhdaskjhdaljskhdkjlash ldk 
-		</div>
-	</body>
+	<div id="rodape" style="background-color: chocolate;">
+		NAsdmjasjkdhaskj haskhdaskjhdaljskhdkjlash ldk
+	</div>
+</body>
+
 </html>
