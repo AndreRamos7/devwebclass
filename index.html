@@ -8,6 +8,36 @@
 	<meta name="description" content="HTMl5">
 	<link rel="stylesheet" href="estilo.css">
 
+	<script >
+		// 1. Seleciona o elemento que você quer animar/monitorar
+		const elemento = document.querySelector('.animar');
+
+		// 2. Define a função de callback que ocorre quando ele aparece
+		const callback = (entries, observer) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+				  // Elemento visível: adiciona uma classe CSS ou anima
+				  entry.target.classList.add('visivel');
+				  console.log('Elemento apareceu na tela!');
+				  // Opcional: Para de observar após a primeira vez
+				  // observer.unobserve(entry.target);
+				}
+			});
+		};
+
+		// 3. Configura o observer
+		const options = {
+			threshold: 0.5 // 0.5 significa que 50% do elemento deve estar visível
+		};
+
+		const observer = new IntersectionObserver(callback, options);
+
+		// 4. Inicia a observação
+		observer.observe(elemento);
+
+
+	</script>
+
 	<script>
 		let nome = "Andre";
 		const sobrenome = "Ramos";
@@ -62,7 +92,7 @@
 		<div class="coluna"> asd3 </div>
 	</div>
 
-	<div id="rodape" style="background-color: chocolate;">
+	<div id="rodape" style="background-color: chocolate;" class="animar">
 		NAsdmjasjkdhaskj haskhdaskjhdaljskhdkjlash ldk
 	</div>
 </body>
