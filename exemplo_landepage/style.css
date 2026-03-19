@@ -1,0 +1,71 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #f4f4f4;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* Benefícios */
+.beneficios {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.card {
+  background: #eee;
+  padding: 20px;
+}
+
+/* Seções */
+section {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .beneficios {
+    flex-direction: column;
+  }
+}
