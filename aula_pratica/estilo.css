@@ -1,5 +1,21 @@
 
-#conteudo {
+#container{
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+}
+
+#conteudo{
+    display: block;
+    margin: 10px auto;
+    width: 50%;
+    height: auto;
+    border: 1px solid black;
+}
+
+#conteudo header, #conteudo section {
     display: flex;
     justify-content: center;
     margin: 10px auto;
@@ -27,3 +43,9 @@ span:hover{
     background-color: orange;
 }
 
+section {
+    display: block;
+    width: 40%;
+    height: 180px;
+    border: 1px solid black;
+}

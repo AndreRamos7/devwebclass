@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            background-color: lightgray;
+            
+            width: 100%;
+            height: 150px;
+            border: 1px solid black;
+        }
+        #quadrado {
+            background-color: orange;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            
+            /* Aqui eu aplico a animação a esse elemento */
+            animation-name: anim_quadrado;
+            /* definindo a duração da animação */
+            animation-duration: 4s;
+            /* e a contagem de iterações */
+            animation-iteration-count: infinite;            
+        }
+        
+        /* Aqui é criado a animação */
+        @keyframes anim_quadrado {
+            0%{
+                margin-left: 5px;
+            }
+            20%{
+                margin-left: 100px;
+                background-color: red;
+            }
+            40%{
+                margin-left: 200px;
+                background-color: blue;
+            }
+            100%{
+                margin-left: 5px;
+                background-color: orange;
+            }   
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="quadrado">
+
+        </div>
+    </div>  
+</body>
+</html>
