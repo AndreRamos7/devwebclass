@@ -1,44 +1,53 @@
     
-    let imagens = [
-    "img/stranger-things-actors/Winona_Ryder.jpg" ,
-    "img/stranger-things-actors/Finn_Wolfhard.jpg",
-    "img/stranger-things-actors/Millie_Bobby_Brown.jpg",
-    "img/stranger-things-actors/sadie_sink.jpeg",
-    "img/stranger-things-actors/David_Harbour.jpg",
-    "img/jogadores/neymar.jpg",
-    "img/jogadores/messi.jpeg",
-    "img/jogadores/ronaldo.jpeg",
-    "img/jogadores/zidane.jpeg",
-    "img/jogadores/pele.jpeg"
-    ]
+    // Criei um dicionário para armazenar os nomes 
+    // e as urls das fotos dos personagens
+
+    let persona = {"pessoas":[
+      {"nome":"Winona Ryder", "foto_url":"img/stranger-things-actors/Winona_Ryder.jpg"},
+      {"nome":"Finn Wolfhard", "foto_url":"img/stranger-things-actors/Finn_Wolfhard.jpg"},
+      {"nome":"Millie Bobby Brown", "foto_url":"img/stranger-things-actors/Millie_Bobby_Brown.jpg"},
+      {"nome":"Sadie Sink", "foto_url":"img/stranger-things-actors/sadie_sink.jpeg"},
+      {"nome":"David Harbour", "foto_url":"img/stranger-things-actors/David_Harbour.jpg"},
+      {"nome":"Neymar", "foto_url":"img/jogadores/neymar.jpg"},
+      {"nome":"Messi", "foto_url":"img/jogadores/messi.jpeg"},
+      {"nome":"Ronaldo", "foto_url":"img/jogadores/ronaldo.jpeg"},
+      {"nome":"Zidane", "foto_url":"img/jogadores/zidane.jpeg"},
+      {"nome":"Pelé", "foto_url":"img/jogadores/pele.jpeg"}
+    ]}
     
-    const elemento = document.getElementById("foto");
+    const divfoto = document.getElementById("foto");
+    const h_nome = document.getElementById("nome");
     
-    imagens.forEach(url => {
+    persona.pessoas.forEach(pessoa => {
         let img = document.createElement("img");
-        img.src = url;
+        img.src = pessoa.foto_url;
         img.width = 110;
         img.height = 150;
         //img.classList.remove("active");
-        elemento.appendChild(img);  
-        console.log(url);
+        divfoto.appendChild(img);
     });
     
     /*for(let cont = 0; cont < imagens.length; cont++){
-        let img = elem.createElement("img");
+        let img = document.createElement("img");
         img.src = imagens[cont];
         img.width = 110;
         img.height = 150;
-        elem.appendChild(img);  
+        elemento.appendChild(img);  
     }*/
 
     let index = 0;
     const images = document
     .querySelectorAll("#foto img");
-    showImage(0)
+    
+    // é preciso chamar a função showImage()
+    // para exibir pelo menos uma imagem, senão
+    // não aparece nenhuma
+    showImage(0);
+
   function showImage(i) {
     images.forEach(img => img.classList.remove("active"));
     images[i].classList.add("active");
+    h_nome.textContent = persona.pessoas[i].nome;
   }
 
   function next() {

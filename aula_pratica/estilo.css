@@ -43,6 +43,11 @@ span:hover{
     background-color: orange;
 }
 
+h5#nome{
+    text-align: center;
+    margin-top: 5px;
+}
+
 #foto img {
     display: none;
 }
