@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
-    <script src="script.js" defer > </script>
+    <script src="script2.js" defer > </script>
+    <!-- <script src="script.js" defer > </script>
+-->
 </head>
 <body>
     <div id="container">
         <div id="conteudo" >
             <header >
-                <span id="voltar" onclick="alert('Esse botão ainda vai funcionar')" > 
+                <span id="voltar" class="arrow left"
+                 onclick="prev()" > 
                     << 
                 </span> <!-- voltar -->
 
                 <div id="foto" > 
-                    <img id="personagem" src="img/stranger-things-actors/Winona_Ryder.jpg" 
-                        width="110" height="150" > 
+                    <!--
+                        <img id="personagem" src="img/stranger-things-actors/Winona_Ryder.jpg" 
+                            width="110" height="150" class="active"> 
+                    -->
                 </div>
                 
                 <!-- Um evento para esse span foi adicionado no script.js -->
-                <span id="avancar" title="Atualizar foto" > 🔄 </span> <!-- avançar -->
+                <span id="avancar" class="arrow right"
+                    title="Atualizar foto" onclick="next()" > 
+                    >> 
+                </span> <!-- avançar -->
             </header>
 
             <section >
@@ -34,8 +42,8 @@
                 <a href="album.html" target="_self"> 
                     Outras fotos 
                 </a>
-                <video width="120" height="140" controls=false 
-                    autoplay="false" loop muted>
+                <video width="120" height="140" controls
+                    autoplay=false loop>
                     <source src="https://www.w3schools.com/html/mov_bbb.mp4"
                      type="video/mp4">
                      Your browser does not support the video tag.
@@ -52,5 +60,6 @@
             </button>
         </div>
     </div>
+    
 </body>
 </html>

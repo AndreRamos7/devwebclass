@@ -1,12 +1,5 @@
 /* CRIA O ARRAY URI DE IMAGENS */
-imagens = [
-    "img/stranger-things-actors/Winona_Ryder.jpg" ,
-    "img/stranger-things-actors/Finn_Wolfhard.jpg",
-    "img/jogadores/neymar.jpg",
-    "img/jogadores/messi.jpeg",
-    "img/jogadores/ronaldo.jpeg",
-    "img/jogadores/zidane.jpeg"
-]
+
 
 /* CRIA A FUNÇÃO PARA TROCAR A IMAGEM */
 function trocarImagem(){
@@ -17,9 +10,9 @@ function trocarImagem(){
     img.src = imagens[indice];
 }
 // SELECIONA O ELEMENTO COM O ID "avancar" E ARMAZENA EM UMA VARIÁVEL
-const botaoAvancar = document.getElementById("avancar");
+//const botaoAvancar = document.getElementById("avancar");
 /* CRIA O EVENTO PARA O BOTAO */
-botaoAvancar.addEventListener("click", trocarImagem);
+//botaoAvancar.addEventListener("click", trocarImagem);
 
 
 /* CRIA A FUNÇÃO PARA MODIFICAR O DOM */

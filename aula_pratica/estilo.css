@@ -43,6 +43,14 @@ span:hover{
     background-color: orange;
 }
 
+#foto img {
+    display: none;
+}
+
+#foto img.active {
+    display: block;
+}
+
 section {
     display: block;
     width: 40%;
